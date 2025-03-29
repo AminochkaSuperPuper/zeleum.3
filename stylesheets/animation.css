@@ -1,0 +1,7 @@
+.image-container2 img {
+    transition: transform 0.2s ease-out; /* Плавный переход */
+}
+
+.image-container3 img {
+    transition: transform 0.2s ease-out; /* Плавный переход */
+}

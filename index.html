@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фон с кнопкой</title> 
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    
+
+   
+</head>
+
+<body>
+    <span id="help" data-tooltip-content="#help-content">?</span>
+  </body>
+
+<body>
+
+    <!-- Первая страница -->
+    <div id="page1" class="page show">
+        <div class="image-container">
+            <img src="images/logo1.png" alt="Центральное изображение">
+            <div class="button-container">
+                <button class="custom-button" onclick="showPage('page2')">начать</button>
+            </div>
+
+          
+        </div>
+
+        <div class="image-container2">
+            <img src="images/pattern2.png" alt="Центральное изображение">
+        </div>
+        <div class="image-container3">
+            <img src="images/pattern1.png" alt="Новое изображение">
+        </div>
+    </div>
+
+    <!-- Вторая страница -->
+    <div id="page2" class="page hide">
+        <div class="new-content">
+            <h1>о нет! в твоём сознании потерялись кое-какие мысли!</h1>
+            <p> пройди 3 уровня, чтобы всё вспомнить!</p>
+            <button class="custom-button back-button" onclick="showPage('page1')">Вернуться назад</button>
+            <div class="image-row">
+                <img src="images/potion1.png" alt="Изображение 1" class="image-item" onclick="showPage('page3')">
+                <img src="images/potion2.png" alt="Изображение 2" class="image-item" onclick="showPage('page4')">
+                <img src="images/potion3.png" alt="Изображение 3" class="image-item" onclick="showPage('page5')">
+            </div>
+        </div>
+    </div>
+
+    <!-- Третья страница (для первого изображения) -->
+    <div id="page3" class="page hide">
+        <div class="new-content">
+            <button class="custom-button back-button" onclick="showPage('page2')">Вернуться назад</button>
+            
+        </div>
+        <title>Неоновый лабиринт</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="instructions">
+            Проведи свою мысль из подсознания в сознание
+        </div>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <div id="winMessage">Победа! Нажмите R для рестарта</div>
+    
+        <script src="game.js"></script>
+    </body>
+        
+    </div>
+
+    <!-- Четвёртая страница (для второго изображения) -->
+    <div id="page4" class="page hide">
+        <div class="new-content">
+            <button class="custom-button back-button" onclick="showPage('page2')">Вернуться назад</button>
+        </div>
+
+        <title>Какие мысли ты забыл?</title>
+    
+</head>
+<body>
+    <h1>Какие мысли ты забыл?</h1>
+    <button onclick="rememberThought()">Вспомнить</button>
+    <div id="result"></div>
+
+    <script>
+        const phrases = [
+            "летающий стол",
+            "сладкий дождь",
+            "говорящий камень",
+            "стеклянный океан",
+            "шоколадный ветер",
+            "танцующий дом",
+            "бумажная луна",
+            "горячий снег",
+            "поющий лес",
+            "железное облако",
+            "бегущая река",
+            "шерстяная молния",
+            "плавающий город",
+            "деревянный телефон",
+            "мраморное небо",
+            "летающая рыба",
+            "серебряный песок",
+            "огненный цветок",
+            "ледяной костёр",
+            "шёпот звёзд",
+            "гигантская мышь",
+            "невидимая гора",
+            "шумная тишина",
+            "плачущее солнце",
+            "резиновый закат",
+            "плюшевый ураган",
+            "магнитная бабочка",
+            "прозрачный дракон",
+            "вязаный мост",
+            "электрическая трава"
+        ];
+
+        function rememberThought() {
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            const randomPhrase = phrases[randomIndex];
+            document.getElementById("result").textContent = randomPhrase;
+        }
+    </script>
+</body>
+    </div>
+
+    <!-- Пятая страница (для третьего изображения) -->
+    <div id="page5" class="page hide">
+        <div class="new-content">
+            <h1>тут должна была быть</h1>
+            <p>3д модель</p>
+            <button class="custom-button back-button" onclick="showPage('page2')">Вернуться назад</button>
+            
+        </div>
+    </div>
+
+   <!-- Подключение Three.js и загрузчиков -->
+
+   <script src="js/OrbitControls.js"></script>
+   <script src="js/script.js"></script>
+   
+
+
+   
+</body>
+</html>
